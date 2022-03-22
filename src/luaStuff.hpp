@@ -24,7 +24,7 @@ extern "C" int addEntry(lua_State *L){
     return 1;
 }
 
-extern "C" int setPatern(lua_State *L){
+extern "C" int setPattern(lua_State *L){
     std::string arg = luaL_checkstring(L, 1);
     data.entrys[data.entrys.size()-1].pattern = arg;
     return 1;
@@ -45,8 +45,8 @@ int runLuaConfig()
         lua_pushcfunction(L, addEntry);
         lua_setglobal(L, "addEntry");
 
-        lua_pushcfunction(L, setPatern);
-        lua_setglobal(L, "setPatern");
+        lua_pushcfunction(L, setPattern);
+        lua_setglobal(L, "setPattern");
     }
     
     if (luaL_dofile(L, "CCoMaS.lua") == LUA_OK) {
