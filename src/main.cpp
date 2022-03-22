@@ -8,7 +8,7 @@
 int main(int argc, char* argv[])
 {
     if (argc > 1 && std::string(argv[1]) == "-isinstall"){
-        std::cout << "Hell Yeah!" << std::endl;
+        std::cerr << "Hell Yeah!" << std::endl;
         return 0;
     }
     runLuaConfig();
