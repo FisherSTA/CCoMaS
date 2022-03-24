@@ -11,9 +11,11 @@ int main(int argc, char* argv[])
         std::cerr << "Hell Yeah!" << std::endl;
         return 0;
     }
+    luaInit();
     runLuaConfig();
     tagCode();
     outputCppFiles();
+    lua_close(L);
     if (argc > 1 && std::string(argv[1]) == "-v")
     {
         for (auto &it1 : data.entrys)

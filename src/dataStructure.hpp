@@ -7,6 +7,7 @@ struct entry
 {
     std::string pattern;
     std::string name;
+    std::string filter;
     std::unordered_set<std::string> members;
 };
 
