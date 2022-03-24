@@ -113,7 +113,7 @@ bool checkLuaFilter(json j, std::string filter)
 {
 
     luaInit();
-    lua_getglobal(L, "testFilter");
+    lua_getglobal(L, filter.c_str());
     lua_newtable(L);
     if (j.contains("inherits"))
     {
